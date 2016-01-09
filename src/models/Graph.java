@@ -18,6 +18,7 @@ public abstract class Graph {
 
     public abstract List<Integer> getNeighbors(int v);
     public abstract void implementAddVertex();
+    public abstract void implementAddEdge(int v, int w);
     
     public Graph() {
         this.numVertices=0;
@@ -32,6 +33,11 @@ public abstract class Graph {
     public void addVertex(){
         implementAddVertex();
         numVertices++;
+    }
+    
+    public void addEdge(int v, int w){
+        implementAddEdge(v, w);
+        numEdges++;
     }
     
     public int getNumVertices() {
